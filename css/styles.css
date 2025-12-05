@@ -1,0 +1,731 @@
+@charset "UTF-8";
+/* CONTENEDOR GENERAL */
+.hl-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* HEADER FIJO Y ELEGANTE */
+.hl-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0d0d0d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 15px 0;
+  z-index: 999;
+}
+
+.hl-logo {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hl-logo:hover {
+  opacity: 1; /* resalta sin perder elegancia */
+  transform: scale(1.02); /* micro-zoom elegante */
+}
+
+@media (max-width: 480px) {
+  .hl-header {
+    padding: 20px 0;
+  }
+  .hl-logo {
+    max-width: 180px;
+  }
+}
+/* ESPACIO PARA EVITAR QUE EL HEADER CUBRA EL CONTENIDO */
+body {
+  background: #000;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+  padding-top: 80px;
+}
+
+/* ============================
+   FOOTER MINIMALISTA HIGH LIFE
+============================= */
+.hl-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 40px 0;
+  background: #000000;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hl-footer-text {
+  font-size: 0.95rem;
+  font-weight: 300;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* ============================
+   ESPACIADO GLOBAL ENTRE SECCIONES
+============================= */
+.hl-section {
+  padding: 80px 0; /* espacio elegante tipo editorial */
+}
+
+.hl-section-tight {
+  padding: 50px 0; /* para bloques más compactos */
+}
+
+.hl-section-loose {
+  padding: 120px 0; /* para hero o bloques premium */
+}
+
+.hl-hero {
+  background: #0d0d0d;
+  padding: 120px 0 100px;
+  text-align: center;
+}
+
+.hl-title {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.hl-subtitle {
+  font-size: 1.2rem;
+  font-weight: 200;
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+/* ============================
+   HERO Inner — Centrado y Layout Premium
+============================= */
+.hl-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+/* ============================
+   BOTÓN PRINCIPAL — Estilo High Life
+============================= */
+.hl-btn-primary {
+  background: #ffffff;
+  color: #000000;
+  padding: 14px 38px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 28px;
+  transition: all 0.25s ease;
+}
+
+.hl-btn-primary:hover {
+  background: #e6e6e6;
+  transform: translateY(-2px);
+}
+
+/* ============================
+   FORMULARIO PREMIUM HIGH LIFE
+============================= */
+.hl-form {
+  background: #000000;
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+.hl-form-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hl-form-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* GRID DEL FORMULARIO */
+.hl-form-grid {
+  display: grid;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .hl-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hl-btn-large {
+    grid-column: span 2;
+  }
+}
+/* INPUT GROUP */
+.hl-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hl-input-group label {
+  font-size: 0.95rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* CAMPOS DE TEXTO */
+.hl-input-group input,
+.hl-input-group select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  padding: 10px 4px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.25s ease;
+}
+
+.hl-input-group input:focus,
+.hl-input-group select:focus {
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+}
+
+/* SELECT PREMIUM */
+.hl-input-group select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+}
+
+/* BOTÓN GRANDE */
+.hl-btn-large {
+  padding: 18px 45px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* ============================
+   ANIMACIÓN PREMIUM — FADE IN
+============================= */
+@keyframes hl-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Aplicar animación al HERO y al FORM */
+.hl-hero,
+.hl-form {
+  animation: hl-fade-in 1.2s ease-out both;
+}
+
+/* ============================
+   SECCIÓN DE BENEFICIOS HIGH LIFE
+============================= */
+.hl-benefits {
+  background: #0d0d0d;
+  padding: 100px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hl-benefits-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hl-benefits-title {
+  font-size: 2.8rem; /* Más editorial */
+  font-weight: 200; /* Más ligero, más luxury */
+  margin-bottom: 35px; /* Más aire */
+  letter-spacing: 1.5px; /* Más elegante */
+  line-height: 1.2; /* Look editorial */
+}
+
+.hl-benefits-text {
+  font-size: 1.15rem; /* Más presencia */
+  font-weight: 200;
+  opacity: 0.85; /* Más visible pero elegante */
+  max-width: 800px; /* Más ancho editorial */
+  margin: 0 auto 70px auto; /* Más aire inferior */
+  line-height: 1.7; /* Más suave */
+  letter-spacing: 0.3px; /* toque editorial */
+}
+
+/* GRID DE 3 COLUMNAS */
+.hl-benefits-grid {
+  display: grid;
+  gap: 40px;
+}
+
+@media (min-width: 900px) {
+  .hl-benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.hl-benefit-item {
+  padding: 10px;
+}
+
+.hl-benefit-item h3 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.hl-benefit-item p {
+  font-size: 1rem;
+  font-weight: 200;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* ============================
+   POLISH EDITORIAL — BENEFITS
+============================= */
+/* Más aire interno */
+.hl-benefit-item {
+  padding: 20px 15px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover premium solo desktop */
+@media (min-width: 900px) {
+  .hl-benefit-item:hover {
+    transform: translateY(-6px);
+    opacity: 0.9;
+  }
+}
+/* Mejor balance entre columnas */
+.hl-benefits-grid {
+  gap: 55px;
+}
+
+/* Ajuste de h3 (más editorial) */
+.hl-benefit-item h3 {
+  margin-bottom: 14px;
+  font-weight: 250;
+  letter-spacing: 1px;
+}
+
+/* Párrafo más suave */
+.hl-benefit-item p {
+  opacity: 0.78;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+
+/* ============================
+   ANIMACIONES EXTRA PREMIUM
+============================= */
+/* Fade-in staggered para items de beneficios */
+@keyframes hl-stagger-fade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hl-benefit-item {
+  animation: hl-stagger-fade 1s ease-out both;
+}
+
+.hl-benefit-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.hl-benefit-item:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.hl-benefit-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Micro-glow elegante en el botón */
+.hl-btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.hl-btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.28);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.hl-btn-primary:hover::after {
+  left: 120%;
+}
+
+/* ============================
+   PERSONAL SHOPPERS — SLIDER MOBILE FIRST
+============================= */
+.hl-shoppers {
+  background: #000000;
+  padding: 90px 0 80px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hl-shoppers-title {
+  font-size: 2.1rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Contenedor tipo stories — scroll horizontal en móvil */
+.hl-shoppers-slider {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  padding-right: 40px; /* permite mostrar completa la última tarjeta */
+  padding-left: 0;
+  overflow-y: hidden;
+}
+
+@media (min-width: 768px) {
+  .hl-shopper-card {
+    flex: 0 0 45%;
+    max-width: 360px;
+  }
+}
+/* Ocultar scrollbar en la mayoría de navegadores */
+.hl-shoppers-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.hl-shoppers-slider {
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Tarjeta de shopper */
+.hl-shopper-card {
+  flex: 0 0 auto;
+  max-width: 320px;
+  background: #101010;
+  border-radius: 10px;
+  padding: 18px 18px 20px;
+  text-align: center;
+  scroll-snap-align: start;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  opacity: 0.96;
+}
+
+.hl-shopper-card img {
+  width: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center; /* Enfoca la parte superior (rostro/torso) */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.hl-shopper-card h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.hl-shopper-card p {
+  font-size: 0.95rem;
+  font-weight: 200;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* Hover sutil en desktop */
+@media (min-width: 900px) {
+  .hl-shoppers-slider {
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  .hl-shopper-card {
+    flex: 0 0 280px;
+  }
+  .hl-shopper-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+    opacity: 1;
+  }
+}
+.hl-shoppers .hl-container {
+  overflow: hidden;
+}
+
+.hl-shoppers-slider-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  display: flex;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  -webkit-backdrop-filter: blur(4px) saturate(140%);
+          backdrop-filter: blur(4px) saturate(140%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.45s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  width: 92%;
+  max-width: 520px;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  padding: 32px;
+  color: #fff;
+  transform: translateY(25px);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.modal-overlay.active .modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-header {
+  margin-bottom: 14px;
+}
+
+.modal-header h3 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.modal-body p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 22px;
+  letter-spacing: 0.2px;
+}
+
+/* === Layout FOTO + TEXTO en dos columnas (solo desktop) === */
+@media (min-width: 768px) {
+  .modal-body {
+    display: flex;
+    gap: 26px;
+    align-items: flex-start;
+  }
+  .modal-photo {
+    width: 42%;
+    margin-bottom: 0;
+    max-height: 360px; /* límite visual en desktop */
+    overflow: hidden;
+  }
+  .modal-body p {
+    width: 58%;
+    margin-bottom: 0;
+  }
+}
+/* Foto dentro del modal */
+.modal-photo {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.modal-photo-wrapper {
+  width: 100%;
+  max-width: 260px;
+  flex-shrink: 0;
+}
+
+.modal-photo-wrapper img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.modal-photo img {
+  width: 100%;
+  height: auto;
+  max-height: 320px; /* evita que la foto se haga gigantesca */
+  -o-object-fit: cover;
+     object-fit: cover; /* mantiene el recorte elegante */
+  display: block;
+  border-radius: 12px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-close {
+  cursor: pointer;
+  padding: 10px 22px;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #d9d9d9;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    max-width: 560px;
+    padding: 36px;
+  }
+}
+/* === Ajustes tipográficos y de espaciado del modal === */
+.hl-modal {
+  max-width: 720px;
+  padding: 40px 56px 32px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hl-modal__title {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+}
+
+.hl-modal__text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 24px 0;
+}
+
+/* Botón de cerrar dentro del modal */
+.hl-modal__close-btn {
+  align-self: flex-end;
+  margin-top: 8px;
+}
+
+/* Ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+  .hl-modal {
+    max-width: 90vw;
+    padding: 24px 20px 20px;
+    gap: 16px;
+  }
+  .hl-modal__title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .hl-modal__text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  /* === Ajuste FOTO ARRIBA + TEXTO ABAJO en mobile === */
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 22px;
+  }
+  .modal-photo-wrapper {
+    max-width: 85%;
+    margin: 0 auto 10px auto;
+  }
+  .modal-photo-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 12px;
+    display: block;
+  }
+  .modal-body p {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .modal {
+    padding: 24px 20px;
+  }
+}
+/* === Estilos mejorados para botones "Ver más" === */
+.hl-shoppers button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hl-shoppers button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}

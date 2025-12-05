@@ -1,0 +1,87 @@
+/* CONTENEDOR GENERAL */
+.hl-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* HEADER FIJO Y ELEGANTE */
+.hl-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0d0d0d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 15px 0;
+  z-index: 999;
+}
+
+.hl-logo {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hl-logo:hover {
+  opacity: 1; /* resalta sin perder elegancia */
+  transform: scale(1.02); /* micro-zoom elegante */
+}
+
+@media (max-width: 480px) {
+  .hl-header {
+    padding: 20px 0;
+  }
+
+  .hl-logo {
+    max-width: 180px;
+  }
+}
+
+/* ESPACIO PARA EVITAR QUE EL HEADER CUBRA EL CONTENIDO */
+body {
+  background: #000;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #fff;
+  padding-top: 80px;
+}
+
+/* ============================
+   FOOTER MINIMALISTA HIGH LIFE
+============================= */
+
+.hl-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 40px 0;
+  background: #000000;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hl-footer-text {
+  font-size: 0.95rem;
+  font-weight: 300;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* ============================
+   ESPACIADO GLOBAL ENTRE SECCIONES
+============================= */
+
+.hl-section {
+  padding: 80px 0; /* espacio elegante tipo editorial */
+}
+
+.hl-section-tight {
+  padding: 50px 0; /* para bloques más compactos */
+}
+
+.hl-section-loose {
+  padding: 120px 0; /* para hero o bloques premium */
+}

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* CONTENEDOR GENERAL */
+.hl-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* HEADER FIJO Y ELEGANTE */
+.hl-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0d0d0d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 15px 0;
+  z-index: 999;
+}
+
+.hl-logo {
+  height: 42px; /* tamaño más elegante y visible */
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.85; /* look premium suave */
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hl-logo:hover {
+  opacity: 1; /* resalta sin perder elegancia */
+  transform: scale(1.02); /* micro-zoom elegante */
+}
+
+/* ESPACIO PARA EVITAR QUE EL HEADER CUBRA EL CONTENIDO */
+body {
+  background: #000;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+  padding-top: 80px;
+}
+
+/* ============================
+   HERO — Estilo High Life
+============================= */
+.hl-hero {
+  background: #0d0d0d;
+  padding: 120px 0 100px;
+  text-align: center;
+}
+
+.hl-title {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.hl-subtitle {
+  font-size: 1.2rem;
+  font-weight: 200;
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+/* ============================
+   HERO Inner — Centrado y Layout Premium
+============================= */
+.hl-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+/* ============================
+   BOTÓN PRINCIPAL — Estilo High Life
+============================= */
+.hl-btn-primary {
+  background: #ffffff;
+  color: #000000;
+  padding: 14px 38px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 28px;
+  transition: all 0.25s ease;
+}
+
+.hl-btn-primary:hover {
+  background: #e6e6e6;
+  transform: translateY(-2px);
+}/*# sourceMappingURL=styles.css.map */

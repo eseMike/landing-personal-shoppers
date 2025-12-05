@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'layout';
+@import 'components';
+@import 'landing';
+@import 'modal';
+
+/* === Estilos mejorados para botones "Ver más" === */
+.hl-shoppers button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hl-shoppers button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}

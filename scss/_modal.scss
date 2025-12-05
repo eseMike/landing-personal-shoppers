@@ -1,0 +1,218 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px) saturate(140%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .45s cubic-bezier(0.22, 0.61, 0.36, 1), visibility .45s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  width: 92%;
+  max-width: 520px;
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 14px;
+  padding: 32px;
+  color: #fff;
+  transform: translateY(25px);
+  opacity: 0;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.modal-overlay.active .modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-header {
+  margin-bottom: 14px;
+}
+
+.modal-header h3 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: .6px;
+}
+
+.modal-body p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: .90;
+  margin-bottom: 22px;
+  letter-spacing: .2px;
+}
+
+/* === Layout FOTO + TEXTO en dos columnas (solo desktop) === */
+@media (min-width: 768px) {
+  .modal-body {
+    display: flex;
+    gap: 26px;
+    align-items: flex-start;
+  }
+
+  .modal-photo {
+    width: 42%;
+    margin-bottom: 0;
+    max-height: 360px; /* límite visual en desktop */
+    overflow: hidden;
+  }
+
+  .modal-body p {
+    width: 58%;
+    margin-bottom: 0;
+  }
+}
+
+/* Foto dentro del modal */
+.modal-photo {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.modal-photo-wrapper {
+  width: 100%;
+  max-width: 260px;
+  flex-shrink: 0;
+}
+
+.modal-photo-wrapper img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.modal-photo img {
+  width: 100%;
+  height: auto;
+  max-height: 320px; /* evita que la foto se haga gigantesca */
+  object-fit: cover; /* mantiene el recorte elegante */
+  display: block;
+  border-radius: 12px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-close {
+  cursor: pointer;
+  padding: 10px 22px;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  transition: background .3s ease, transform .3s ease;
+}
+
+.modal-close:hover {
+  background: #d9d9d9;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    max-width: 560px;
+    padding: 36px;
+  }
+}
+
+//------
+/* === Ajustes tipográficos y de espaciado del modal === */
+
+.hl-modal {
+  max-width: 720px;
+  padding: 40px 56px 32px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; // espacio entre título, texto y botón
+}
+
+.hl-modal__title {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+}
+
+.hl-modal__text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 24px 0;
+}
+
+/* Botón de cerrar dentro del modal */
+.hl-modal__close-btn {
+  align-self: flex-end;
+  margin-top: 8px;
+}
+
+/* Ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+  .hl-modal {
+    max-width: 90vw;
+    padding: 24px 20px 20px;
+    gap: 16px;
+  }
+
+  .hl-modal__title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .hl-modal__text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /* === Ajuste FOTO ARRIBA + TEXTO ABAJO en mobile === */
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 22px;
+  }
+
+  .modal-photo-wrapper {
+    max-width: 85%;
+    margin: 0 auto 10px auto;
+  }
+
+  .modal-photo-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .modal-body p {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .modal {
+    padding: 24px 20px;
+  }
+}

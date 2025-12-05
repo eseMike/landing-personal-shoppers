@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High Life — Personal Shopper</title>
+
+    <!-- CSS compilado -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="hl-header">
+        <div class="hl-container">
+            <img src="assets/calderoni-logo.svg" alt="Calderoni" class="hl-logo">
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hl-hero">
+        <div class="hl-container">
+            <div class="hl-hero-inner">
+                <h1 class="hl-title">Agenda tu consultoría de imagen gratuita</h1>
+                <p class="hl-subtitle">Personal Shoppers a tu medida: en tienda, a domicilio o en línea.</p>
+                <button class="hl-btn-primary">Agendar mi cita</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO PREMIUM HIGH LIFE -->
+    <section class="hl-form">
+      <div class="hl-container hl-form-inner">
+
+        <h2 class="hl-form-title">Agenda una cita</h2>
+
+        <form id="booking-form" class="hl-form-grid">
+          <div class="hl-input-group">
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Escribe tu nombre" required />
+          </div>
+
+          <div class="hl-input-group">
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="nombre@correo.com" required />
+          </div>
+
+          <div class="hl-input-group">
+            <label>Teléfono</label>
+            <input type="tel" placeholder="55 0000 0000" required />
+          </div>
+
+          <div class="hl-input-group">
+            <label>Modalidad</label>
+            <select required>
+              <option value="">Selecciona una opción</option>
+              <option value="tienda">En tienda</option>
+              <option value="domicilio">A domicilio</option>
+              <option value="online">En línea</option>
+            </select>
+          </div>
+
+          <button type="submit" class="hl-btn-primary hl-btn-large">
+            Confirmar cita
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN SIGUIENTE — BENEFICIOS HIGH LIFE -->
+    <section class="hl-benefits">
+      <div class="hl-container hl-benefits-inner">
+
+        <h2 class="hl-benefits-title">Tu imagen, nuestra pasión.</h2>
+
+        <p class="hl-benefits-text">
+          En High Life, nuestros Personal Shoppers te guían para encontrar el estilo ideal
+          para cada momento de tu vida. Desde eventos formales hasta atuendos casuales,
+          queremos que luzcas impecable con piezas seleccionadas especialmente para ti.
+        </p>
+
+        <div class="hl-benefits-grid">
+          <div class="hl-benefit-item">
+            <h3>Asesoría Personalizada</h3>
+            <p>Un experto que entiende tu estilo, preferencias y necesidades específicas.</p>
+          </div>
+
+          <div class="hl-benefit-item">
+            <h3>Looks para Cada Ocasión</h3>
+            <p>Outfits seleccionados cuidadosamente para momentos casuales, formales o especiales.</p>
+          </div>
+
+          <div class="hl-benefit-item">
+            <h3>Experiencia Premium</h3>
+            <p>Atención exclusiva en tienda, a domicilio o virtual con la calidad High Life.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PERSONAL SHOPPERS — SLIDER DESTACADO -->
+    <section class="hl-shoppers">
+      <div class="hl-container">
+        <h2 class="hl-shoppers-title">Conoce a nuestros Personal Shoppers</h2>
+
+        <div class="hl-shoppers-slider-wrapper">
+          <div class="hl-shoppers-slider" style="width: max-content;">
+
+          <!-- PS‑01 -->
+          <div class="hl-shopper-card">
+            <img src="assets/personalshoppers/ps-01/ps-carlos-segoviano-01.jpg" alt="Carlos Segoviano">
+            <h3>Carlos Segoviano</h3>
+            <p>Especialista en estilo formal y casual premium.</p>
+            <button class="hl-view-more" data-id="modal-carlos" data-photo="./assets/personalshoppers/ps-01/ps-carlos-segoviano-01.jpg">Ver más</button>
+          </div>
+
+          <!-- PS‑02 -->
+          <div class="hl-shopper-card">
+            <img src="assets/personalshoppers/ps-02/ps-02-jose-antonio-valdovino-segoviano-01.jpg" alt="José Antonio Valdovino Segoviano">
+            <h3>José Antonio Valdovino Segoviano</h3>
+            <p>Experto en consultoría de imagen personalizada.</p>
+            <button class="hl-view-more" data-id="modal-jose-antonio" data-photo="assets/personalshoppers/ps-02/ps-02-jose-antonio-valdovino-segoviano-01.jpg">Ver más</button>
+          </div>
+
+          <!-- PS‑03 -->
+          <div class="hl-shopper-card">
+            <img src="assets/personalshoppers/ps-03/ps-03-carlos-santillan-fuentes-01.jpg" alt="Carlos Santillán Fuentes">
+            <h3>Carlos Santillán Fuentes</h3>
+            <p>Atención a domicilio y selección premium.</p>
+            <button class="hl-view-more" data-id="modal-carlos-santillan" data-photo="assets/personalshoppers/ps-03/ps-03-carlos-santillan-fuentes-01.jpg">Ver más</button>
+          </div>
+
+          <!-- PS‑04 -->
+          <div class="hl-shopper-card">
+            <img src="assets/personalshoppers/ps-04/ps-04-alejandro-morales-pinto-01.jpg" alt="Alejandro Morales Pinto">
+            <h3>Alejandro Morales Pinto</h3>
+            <p>Experiencia de compra personalizada y estilo coherente.</p>
+            <button class="hl-view-more" data-id="modal-alejandro-morales" data-photo="assets/personalshoppers/ps-04/ps-04-alejandro-morales-pinto-01.jpg">Ver más</button>
+          </div>
+
+
+          <!-- PS‑05 -->
+          <div class="hl-shopper-card">
+            <img src="assets/personalshoppers/ps-05/ps-05-ana-gabriela-frias-flores-01.jpg" alt="Ana Gabriela Frías Flores">
+            <h3>Ana Gabriela Frías Flores</h3>
+            <p>Selección de outfits premium personalizados.</p>
+            <button class="hl-view-more" data-id="modal-ana-gabriela" data-photo="./assets/personalshoppers/ps-05/ps-05-ana-gabriela-frias-flores-01.jpg">Ver más</button>
+          </div>
+
+          <!-- PS‑06 -->
+          <div class="hl-shopper-card">
+            <img src="assets/personalshoppers/ps-06/ps-06-jose-luis-herrera-lopez-01.jpg" alt="José Luis Herrera López">
+            <h3>José Luis Herrera López</h3>
+            <p>Asesoría experta para cada ocasión.</p>
+            <button class="hl-view-more" data-id="modal-jose-luis" data-photo="assets/personalshoppers/ps-06/ps-06-jose-luis-herrera-lopez-01.jpg">Ver más</button>
+          </div>
+
+          <!-- PS‑07 -->
+          <div class="hl-shopper-card">
+            <img src="assets/personalshoppers/ps-07/ps-07-ricardo-lino-rodriguez-01.jpg" alt="Ricardo Lino Rodríguez">
+            <h3>Ricardo Lino Rodríguez</h3>
+            <p>Especialista en identidad visual y estilo personal.</p>
+            <button class="hl-view-more" data-id="modal-ricardo-lino" data-photo="assets/personalshoppers/ps-07/ps-07-ricardo-lino-rodriguez-01.jpg">Ver más</button>
+          </div>
+
+          <!-- PS‑08 -->
+          <div class="hl-shopper-card">
+            <img src="assets/personalshoppers/ps-08/ps-08-oscar-miguel-morelos-hernandez-01.jpg" alt="Oscar Miguel Morelos Hernández">
+            <h3>Oscar Miguel Morelos Hernández</h3>
+            <p>Estilo auténtico con equilibrio y seguridad.</p>
+            <button class="hl-view-more" data-id="modal-oscar-miguel" data-photo="assets/personalshoppers/ps-08/ps-08-oscar-miguel-morelos-hernandez-01.jpg">Ver más</button>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 🔥 BLOQUES OCULTOS — CONTENIDO COMPLETO DE CADA PERSONAL SHOPPER -->
+    <div id="hl-hidden-shoppers" style="display:none;">
+
+      <div id="data-carlos-segoviano">
+        <h3>Carlos Segoviano</h3>
+        <p>
+          Mi labor es entender tu estilo, tus necesidades y tu ritmo de vida para ayudarte a proyectar tu mejor versión con un guardarropa funcional, sofisticado y coherente.
+          Te acompaño en un proceso de transformación de imagen, diseñando outfits completos para diferentes ocasiones que reflejen tu personalidad con elegancia clásica al estilo High Life.
+        </p>
+      </div>
+
+      <div id="data-carlos">
+        <h3>Carlos Segoviano</h3>
+        <p>
+          Mi labor es entender tu estilo, tus necesidades y tu ritmo de vida para ayudarte a proyectar tu mejor versión con un guardarropa funcional, sofisticado y coherente.
+          Te acompaño en un proceso de transformación de imagen, diseñando outfits completos para diferentes ocasiones que reflejen tu personalidad con elegancia clásica al estilo High Life.
+        </p>
+      </div>
+
+      <div id="data-jose-antonio">
+        <h3>José Antonio Valdovino Segoviano</h3>
+        <p>
+          Mi labor es ayudarte a identificar tu estilo natural y transformarlo en una imagen auténtica y coherente que potencie tu personalidad.
+          Acompaño a cada cliente a descubrir la mejor versión de sí mismo a través de un estilo funcional, moderno y elegante diseñado a su medida.
+        </p>
+      </div>
+
+      <div id="data-carlos-santillan">
+        <h3>Carlos Santillán Fuentes</h3>
+        <p>
+          Me enfoco en brindar experiencias cómodas donde descubras prendas que eleven tu estilo, ya sea en tienda o a domicilio.
+          Para mí ser Personal Shopper es entenderte a profundidad y ayudarte a tomar decisiones inteligentes de estilo con una selección premium pensada especialmente para ti.
+        </p>
+      </div>
+
+      <div id="data-alejandro-morales">
+        <h3>Alejandro Morales Pinto</h3>
+        <p>
+          Te guío a lograr un estilo que proyecte seguridad, elegancia y coherencia visual, escuchando tus necesidades y tu estilo de vida.
+          Mi enfoque es combinar sensibilidad estética con servicio humano, creando looks que hagan sentido contigo y con los momentos importantes de tu día a día.
+        </p>
+      </div>
+
+      <div id="data-ana-gabriela">
+        <h3>Ana Gabriela Frías Flores</h3>
+        <p>
+          Alineo tu estilo con prendas que te hagan sentir segura y elegante, ayudándote a descubrir el poder de una buena imagen.
+          Selecciono outfits premium que conectan con tu personalidad y tus metas, cuidando cada detalle para que te veas y te sientas increíble.
+        </p>
+      </div>
+
+      <div id="data-jose-luis">
+        <h3>José Luis Herrera López</h3>
+        <p>
+          Mi labor es acompañarte a descubrir y potenciar tu estilo único, adaptado a tus necesidades, personalidad y a cada ocasión importante.
+          Para mí ser Personal Shopper es crear confianza a través de la imagen, con asesoría personalizada que equilibra estilo, comodidad y funcionalidad.
+        </p>
+      </div>
+
+      <div id="data-ricardo-lino">
+        <h3>Ricardo Lino Rodríguez</h3>
+        <p>
+          Te ayudo a construir una identidad visual sólida y coherente, alineada con quién eres y hacia dónde quieres ir.
+          Diseño looks completos que proyectan seguridad, autenticidad y presencia, con un enfoque en estilo personal contemporáneo y prendas premium.
+        </p>
+      </div>
+
+      <div id="data-oscar-miguel">
+        <h3>Oscar Miguel Morelos Hernández</h3>
+        <p>
+          Mi labor es ayudarte a lograr una imagen segura y equilibrada, alineada con tus objetivos personales y profesionales.
+          Acompaño tu proceso de autodescubrimiento a través de la imagen, creando propuestas visuales claras, elegantes y fáciles de adoptar en tu día a día.
+        </p>
+      </div>
+
+    </div>
+    <!-- MODAL DINÁMICO GLOBAL -->
+    <div class="modal-overlay" id="hl-modal-overlay">
+      <div class="modal" id="hl-modal">
+        <div class="modal-header">
+          <h3 id="hl-modal-title"></h3>
+        </div>
+        <div class="modal-body">
+          <div class="modal-photo-wrapper">
+            <img id="hl-modal-photo" src="" alt="">
+          </div>
+          <p id="hl-modal-description"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-close" id="hl-modal-close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER MINIMALISTA HIGH LIFE -->
+    <footer class="hl-footer">
+      <div class="hl-container">
+        <p class="hl-footer-text">© 2025 High Life. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <!-- JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
