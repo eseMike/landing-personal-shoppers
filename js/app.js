@@ -163,4 +163,15 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("active");
     }
   });
+
+  /* === SCROLL SUAVE DESDE EL BOTÓN DEL HERO HACIA EL FORMULARIO === */
+  const heroBtn = document.querySelector(".hl-hero-btn");
+  const formSection = document.querySelector(".hl-form");
+
+  if (heroBtn && formSection) {
+    heroBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      formSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
 });

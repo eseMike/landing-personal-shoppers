@@ -1,21 +1,23 @@
 .hl-hero {
   background: #0d0d0d;
-  padding: 120px 0 100px;
+  padding: 85px 0 55px;
   text-align: center;
 }
 
 .hl-title {
-  font-size: 3rem;
+  font-size: 2.55rem;
   font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+  letter-spacing: 1.4px;
+  margin-bottom: 10px;
   color: #ffffff;
 }
 
 .hl-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 200;
-  opacity: 0.8;
+  opacity: 0.80;
+  letter-spacing: 0.4px;
+  margin-bottom: 14px;
   color: #ffffff;
 }
 
@@ -26,7 +28,7 @@
 .hl-hero-inner {
   max-width: 720px;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 28px;
 }
 
 /* ============================
@@ -36,14 +38,14 @@
 .hl-btn-primary {
   background: #ffffff;
   color: #000000;
-  padding: 14px 38px;
+  padding: 12px 38px;
   border: none;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   cursor: pointer;
-  margin-top: 28px;
+  margin-top: 20px;
   transition: all 0.25s ease;
 }
 
@@ -58,7 +60,7 @@
 
 .hl-form {
   background: #000000;
-  padding: 80px 0;
+  padding: 78px 0 55px;
   color: #ffffff;
 }
 
@@ -69,17 +71,21 @@
 }
 
 .hl-form-title {
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 300;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 1.6px;
+}
+
+.hl-form-inner p {
+  margin-bottom: 12px;
 }
 
 /* GRID DEL FORMULARIO */
 .hl-form-grid {
   display: grid;
-  gap: 30px;
+  gap: 22px;
 }
 
 @media (min-width: 768px) {
@@ -102,7 +108,8 @@
 .hl-input-group label {
   font-size: 0.95rem;
   font-weight: 300;
-  opacity: 0.8;
+  opacity: 0.72;
+  line-height: 1.35;
 }
 
 /* CAMPOS DE TEXTO */
@@ -132,7 +139,7 @@
 
 /* BOTÓN GRANDE */
 .hl-btn-large {
-  padding: 18px 45px;
+  padding: 14px 45px;
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
@@ -164,7 +171,7 @@
 
 .hl-benefits {
   background: #0d0d0d;
-  padding: 100px 0;
+  padding: 85px 0 35px;
   color: #ffffff;
   text-align: center;
 }
@@ -175,20 +182,20 @@
 }
 
 .hl-benefits-title {
-  font-size: 2.8rem; /* Más editorial */
+  font-size: 2.55rem; /* Más editorial */
   font-weight: 200; /* Más ligero, más luxury */
   margin-bottom: 35px; /* Más aire */
-  letter-spacing: 1.5px; /* Más elegante */
+  letter-spacing: 1.8px; /* Más elegante */
   line-height: 1.2; /* Look editorial */
 }
 
 .hl-benefits-text {
   font-size: 1.15rem; /* Más presencia */
   font-weight: 200;
-  opacity: 0.85; /* Más visible pero elegante */
-  max-width: 800px; /* Más ancho editorial */
-  margin: 0 auto 70px auto; /* Más aire inferior */
-  line-height: 1.7; /* Más suave */
+  opacity: 0.82; /* Más visible pero elegante */
+  max-width: 680px; /* Más ancho editorial */
+  margin: 0 auto 55px auto;
+  line-height: 1.75; /* Más suave */
   letter-spacing: 0.3px; /* toque editorial */
 }
 
@@ -209,7 +216,7 @@
 }
 
 .hl-benefit-item h3 {
-  font-size: 1.4rem;
+  font-size: 1.33rem;
   font-weight: 300;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
@@ -218,8 +225,8 @@
 .hl-benefit-item p {
   font-size: 1rem;
   font-weight: 200;
-  opacity: 0.75;
-  line-height: 1.6;
+  opacity: 0.72;
+  line-height: 1.72;
 }
 
 /* ============================
@@ -228,7 +235,7 @@
 
 /* Más aire interno */
 .hl-benefit-item {
-  padding: 20px 15px;
+  padding: 32px 18px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -254,8 +261,8 @@
 
 /* Párrafo más suave */
 .hl-benefit-item p {
-  opacity: 0.78;
-  line-height: 1.7;
+  opacity: 0.72;
+  line-height: 1.72;
   letter-spacing: 0.2px;
 }
 
@@ -319,7 +326,7 @@
 
 .hl-shoppers {
   background: #000000;
-  padding: 90px 0 80px;
+  padding: 50px 0 50px;
   color: #ffffff;
   overflow: hidden;
 }
@@ -328,8 +335,10 @@
   font-size: 2.1rem;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+  margin-bottom: 45px;
+  margin-top: 20px;
+  letter-spacing: 1.6px;
+  letter-spacing: 1.3px;
 }
 
 /* Contenedor tipo stories — scroll horizontal en móvil */
@@ -368,42 +377,50 @@
   max-width: 320px;
   background: #101010;
   border-radius: 10px;
-  padding: 18px 18px 20px;
+  padding: 18px 18px 28px;
   text-align: center;
   scroll-snap-align: start;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   opacity: 0.96;
+  display: flex;
+  flex-direction: column;
 }
 
 .hl-shopper-card img {
   width: 100%;
-  height: 260px;
+  height: 320px;
   object-fit: cover;
-  object-position: top center; /* Enfoca la parte superior (rostro/torso) */
+  object-position: center 22%;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .hl-shopper-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 300;
-  margin-bottom: 6px;
+  margin-top: 6px;
+  margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
 
 .hl-shopper-card p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 200;
-  opacity: 0.8;
-  line-height: 1.5;
+  opacity: 0.80;
+  line-height: 1.58;
+  margin-bottom: 12px;
+}
+
+.hl-shopper-card button {
+  margin-top: auto;
 }
 
 /* Hover sutil en desktop */
 @media (min-width: 900px) {
   .hl-shoppers-slider {
     justify-content: flex-start;
-    gap: 24px;
+    gap: 28px;
   }
 
   .hl-shopper-card {
@@ -428,4 +445,51 @@
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   display: flex;
+}
+@media (max-width: 480px) {
+  .hl-title {
+    font-size: 2.1rem;
+    margin-bottom: 8px;
+  }
+
+  .hl-benefits-title {
+    font-size: 2rem;
+  }
+
+  .hl-shoppers-title {
+    font-size: 1.8rem;
+  }
+
+  /* NUEVO: compactar vertical en mobile */
+  .hl-hero {
+    padding: 80px 0 50px;
+  }
+
+  .hl-form {
+    padding: 70px 0 65px;
+  }
+
+  .hl-benefits {
+    padding: 70px 0 55px;
+  }
+
+  .hl-benefits-grid {
+    gap: 28px;
+  }
+
+  .hl-shoppers {
+    padding: 60px 0 75px;
+  }
+
+  .hl-form-grid {
+    gap: 16px;
+  }
+
+  .hl-btn-large {
+    width: 100%;
+    padding: 12px 0;
+  }
+  .hl-subtitle {
+    margin-bottom: 10px;
+  }
 }
