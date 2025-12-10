@@ -1,0 +1,52 @@
+/* ============================================
+   ANIMACIONES PREMIUM — HIGH LIFE
+   ============================================ */
+
+/* Estado inicial (oculto) */
+.hl-animate {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Estado visible (cuando el observer hace trigger) */
+.hl-animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variantes premium */
+
+/* Fade-Up suave */
+.hl-animate.fade-up {
+  transform: translateY(28px);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+}
+
+/* Fade-In directo */
+.hl-animate.fade-in {
+  transform: none;
+  transition: opacity 0.9s ease;
+}
+
+/* Slide minimal */
+.hl-animate.slide-left {
+  transform: translateX(22px);
+}
+
+.hl-animate-visible.slide-left {
+  transform: translateX(0);
+}
+
+/* Delays editoriales */
+.hl-delay-1 { transition-delay: 0.15s; }
+.hl-delay-2 { transition-delay: 0.30s; }
+.hl-delay-3 { transition-delay: 0.45s; }
+.hl-delay-4 { transition-delay: 0.60s; }
+
+/* Modo mobile: animación más suave */
+@media (max-width: 480px) {
+  .hl-animate {
+    transform: translateY(18px);
+  }
+}

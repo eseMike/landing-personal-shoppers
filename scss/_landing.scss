@@ -1,24 +1,28 @@
 .hl-hero {
   background: #0d0d0d;
-  padding: 85px 0 55px;
+  padding: 125px 0 90px;
   text-align: center;
+  padding-bottom: 70px;
 }
 
 .hl-title {
-  font-size: 2.55rem;
-  font-weight: 300;
-  letter-spacing: 1.4px;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 250;
+  letter-spacing: 1.8px;
+  margin-bottom: 16px;
   color: #ffffff;
 }
 
 .hl-subtitle {
   font-size: 1.15rem;
   font-weight: 200;
-  opacity: 0.80;
-  letter-spacing: 0.4px;
-  margin-bottom: 14px;
+  opacity: 0.9;
+  letter-spacing: 0.55px;
+  margin-bottom: 26px;
   color: #ffffff;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ============================
@@ -26,9 +30,9 @@
 ============================= */
 
 .hl-hero-inner {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
-  padding-top: 28px;
+  padding-top: 26px;
 }
 
 /* ============================
@@ -38,11 +42,11 @@
 .hl-btn-primary {
   background: #ffffff;
   color: #000000;
-  padding: 12px 38px;
+  padding: 11px 36px;
   border: none;
   font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   cursor: pointer;
   margin-top: 20px;
@@ -60,26 +64,29 @@
 
 .hl-form {
   background: #000000;
-  padding: 78px 0 55px;
+  padding: 105px 0 135px;
   color: #ffffff;
 }
 
 .hl-form-inner {
-  max-width: 900px;
+  max-width: 780px;
   margin: 0 auto;
   text-align: left;
 }
 
 .hl-form-title {
-  font-size: 1.85rem;
+  margin-top: 15px;
+  font-size: 2rem;
   font-weight: 300;
-  margin-bottom: 12px;
+  margin-bottom: 52px; 
   text-align: center;
-  letter-spacing: 1.6px;
+  margin-bottom: 36px; 
+  letter-spacing: 1.4px; 
 }
 
 .hl-form-inner p {
-  margin-bottom: 12px;
+  margin-bottom: 34px;
+  line-height: 1.7;
 }
 
 /* GRID DEL FORMULARIO */
@@ -109,7 +116,8 @@
   font-size: 0.95rem;
   font-weight: 300;
   opacity: 0.72;
-  line-height: 1.35;
+  line-height: 1.28;
+  margin-bottom: 4px;
 }
 
 /* CAMPOS DE TEXTO */
@@ -118,15 +126,15 @@
   background: transparent;
   border: none;
   border-bottom: 1px solid #444;
-  padding: 10px 4px;
   color: #ffffff;
-  font-size: 1rem;
   transition: border-color 0.25s ease;
+  padding: 10px 4px;
+  font-size: 0.96rem;
 }
 
 .hl-input-group input:focus,
 .hl-input-group select:focus {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #e6e6e6;
   outline: none;
 }
 
@@ -139,7 +147,7 @@
 
 /* BOTÓN GRANDE */
 .hl-btn-large {
-  padding: 14px 45px;
+  padding: 16px 48px;
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
@@ -171,7 +179,7 @@
 
 .hl-benefits {
   background: #0d0d0d;
-  padding: 85px 0 35px;
+  padding: 95px 0 70px;
   color: #ffffff;
   text-align: center;
 }
@@ -184,17 +192,17 @@
 .hl-benefits-title {
   font-size: 2.55rem; /* Más editorial */
   font-weight: 200; /* Más ligero, más luxury */
-  margin-bottom: 35px; /* Más aire */
-  letter-spacing: 1.8px; /* Más elegante */
+  margin-bottom: 38px; /* Más aire */
+  letter-spacing: 2px; /* Más elegante */
   line-height: 1.2; /* Look editorial */
 }
 
 .hl-benefits-text {
   font-size: 1.15rem; /* Más presencia */
   font-weight: 200;
-  opacity: 0.82; /* Más visible pero elegante */
+  opacity: 0.78; /* Más visible pero elegante */
   max-width: 680px; /* Más ancho editorial */
-  margin: 0 auto 55px auto;
+  margin: 0 auto 40px auto;
   line-height: 1.75; /* Más suave */
   letter-spacing: 0.3px; /* toque editorial */
 }
@@ -211,16 +219,7 @@
   }
 }
 
-.hl-benefit-item {
-  padding: 10px;
-}
 
-.hl-benefit-item h3 {
-  font-size: 1.33rem;
-  font-weight: 300;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-}
 
 .hl-benefit-item p {
   font-size: 1rem;
@@ -237,6 +236,10 @@
 .hl-benefit-item {
   padding: 32px 18px;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Hover premium solo desktop */
@@ -255,8 +258,9 @@
 /* Ajuste de h3 (más editorial) */
 .hl-benefit-item h3 {
   margin-bottom: 14px;
-  font-weight: 250;
+  font-weight: 350;
   letter-spacing: 1px;
+  line-height: 1.35;
 }
 
 /* Párrafo más suave */
@@ -264,6 +268,8 @@
   opacity: 0.72;
   line-height: 1.72;
   letter-spacing: 0.2px;
+  text-align: center;
+  max-width: 260px;
 }
 
 /* ============================
@@ -325,30 +331,30 @@
 ============================= */
 
 .hl-shoppers {
-  background: #000000;
-  padding: 50px 0 50px;
-  color: #ffffff;
+  background: #ffffff;        
+  padding: 80px 0 80px;
+  color: #000000;             
   overflow: hidden;
 }
 
 .hl-shoppers-title {
-  font-size: 2.1rem;
+  font-size: 2.45rem; 
   font-weight: 300;
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 48px;
   margin-top: 20px;
-  letter-spacing: 1.6px;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.3px; /* mantener */
+  line-height: 1.25;
 }
 
 /* Contenedor tipo stories — scroll horizontal en móvil */
 .hl-shoppers-slider {
   display: flex;
-  gap: 18px;
+  gap: 32px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 8px;
+  padding-bottom: 18px;
   padding-right: 40px; /* permite mostrar completa la última tarjeta */
   padding-left: 0;
   overflow-y: hidden;
@@ -356,7 +362,7 @@
 
 @media (min-width: 768px) {
   .hl-shopper-card {
-    flex: 0 0 45%;
+    flex: 0 0 42%;
     max-width: 360px;
   }
 }
@@ -375,12 +381,12 @@
 .hl-shopper-card {
   flex: 0 0 auto;
   max-width: 320px;
-  background: #101010;
+  background: #f7f7f7;
   border-radius: 10px;
   padding: 18px 18px 28px;
   text-align: center;
   scroll-snap-align: start;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   opacity: 0.96;
   display: flex;
@@ -393,34 +399,38 @@
   object-fit: cover;
   object-position: center 22%;
   border-radius: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .hl-shopper-card h3 {
   font-size: 1.15rem;
   font-weight: 300;
-  margin-top: 6px;
+  margin-top: 4px;
   margin-bottom: 10px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.9px;
+  line-height: 1.32;
 }
 
 .hl-shopper-card p {
   font-size: 0.9rem;
   font-weight: 200;
-  opacity: 0.80;
-  line-height: 1.58;
-  margin-bottom: 12px;
+  opacity: 0.85;
+  line-height: 1.65;
+  margin-bottom: 24px;
+  max-width: 260px;
+  min-height: 75px; 
 }
 
 .hl-shopper-card button {
   margin-top: auto;
+  padding-top: 6px;
 }
 
 /* Hover sutil en desktop */
 @media (min-width: 900px) {
   .hl-shoppers-slider {
     justify-content: flex-start;
-    gap: 28px;
+    gap: 34px;
   }
 
   .hl-shopper-card {
@@ -429,8 +439,11 @@
 
   .hl-shopper-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.55);
+    filter: brightness(1.03);
     opacity: 1;
+    transition: transform 0.3s ease, box-shadow 0.35s ease, filter 0.3s ease, opacity 0.3s ease;
+  
   }
 }
 
@@ -474,7 +487,7 @@
   }
 
   .hl-benefits-grid {
-    gap: 28px;
+    gap: 34px;
   }
 
   .hl-shoppers {
@@ -488,8 +501,216 @@
   .hl-btn-large {
     width: 100%;
     padding: 12px 0;
+    letter-spacing: 1.6px;
+    border-radius: 4px;
   }
   .hl-subtitle {
     margin-bottom: 10px;
+  }
+}
+
+/* ============================
+   SECCIÓN — CÓMO FUNCIONA (Editorial Premium)
+============================= */
+
+.hl-howto {
+  background: #ffffff;
+  padding: 95px 0 95px;
+  text-align: center;
+  color: #000000;
+}
+
+.hl-howto-title {
+  font-size: 2.65rem;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  margin-bottom: 70px;
+  line-height: 1.25;
+}
+
+.hl-howto-steps {
+  display: grid;
+  gap: 75px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .hl-howto-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hl-howto-step {
+  text-align: center;
+  padding: 10px 18px;
+}
+
+.hl-howto-number {
+  font-weight: 200;
+  color: #000000;
+  display: block;
+  line-height: 1;
+  margin-bottom: -18px;
+  font-size: 6.6rem;
+  opacity: 0.07;
+}
+
+.hl-howto-step-title {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  line-height: 1.35;
+  font-weight: 320;
+  letter-spacing: 0.7px;
+}
+
+.hl-howto-step-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0 auto;
+  letter-spacing: 0.3px;
+  max-width: 300px;
+  opacity: 0.72;
+}
+
+/* ANIMACIÓN EDITORIAL */
+.hl-howto-step {
+  animation: hl-stagger-fade 1s ease-out both;
+}
+
+.hl-howto-step:nth-child(1) { animation-delay: 0.05s; }
+.hl-howto-step:nth-child(2) { animation-delay: 0.2s; }
+.hl-howto-step:nth-child(3) { animation-delay: 0.35s; }
+
+/* ============================
+   TESTIMONIOS — VOZ DE NUESTROS CLIENTES
+============================= */
+
+.hl-testimonials {
+  background: #000000;
+  color: #ffffff;
+  padding: 95px 0 125px;
+}
+
+.hl-testimonials-title {
+  font-size: 2.3rem;
+  font-weight: 300;
+  margin-bottom: 55px;
+  letter-spacing: 1.8px;
+}
+
+.hl-testimonial-item {
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto 32px auto;
+  letter-spacing: 0.35px;
+  font-size: 1rem;
+  opacity: 0.8;
+} 
+
+/* rayita larga antes del nombre del cliente */
+.hl-testimonial-item::before {
+  content: "\2014 ";
+  opacity: 0.7;
+  display: block;
+}
+
+.hl-testimonial-author {
+  font-size: 0.95rem;
+  font-weight: 300;
+  margin-top: 4px;
+  opacity: 0.85;
+  letter-spacing: 0.45px;
+}
+
+/* Responsive fino para mobile */
+@media (max-width: 480px) {
+  .hl-testimonials {
+    padding: 65px 0 70px;
+  }
+
+  .hl-testimonials-title {
+    font-size: 1.9rem;
+    margin-bottom: 26px;
+    text-align: left;
+  }
+
+  .hl-testimonial-item {
+    font-size: 1.02rem;
+    line-height: 1.65;
+  }
+}
+
+/* ============================
+   CIERRE PREMIUM BLACK — FINAL CTA
+============================= */
+
+.hl-closure {
+  background: #000000;
+  padding: 110px 0 130px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hl-closure-title {
+  font-weight: 300;
+  margin-bottom: 22px;
+  line-height: 1.28;
+  font-size: 2.7rem;
+  letter-spacing: 1.75px;
+}
+
+.hl-closure-text {
+  font-size: 1.15rem;
+  font-weight: 200;
+  max-width: 640px;
+  margin: 0 auto 40px auto;
+  line-height: 1.75;
+  letter-spacing: 0.3px;
+  opacity: 0.82;
+}
+
+.hl-closure .hl-btn-primary {
+  padding: 14px 48px;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+}
+
+/* Animación suave */
+.hl-animate.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: hl-fade-in 1.3s ease-out both;
+}
+
+/* ============================
+   FOOTER — HIGH LIFE PREMIUM
+============================= */
+
+
+.hl-footer {
+  background: #000; /* negro elegante */
+  text-align: center;
+  margin-top: 80px; /* más elegancia */
+  padding: 60px 0; /* aire correcto */
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 70px;
+  .hl-footer-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.70);
+    letter-spacing: 0.5px;
+    opacity: 0.78;
+  }
+}
+
+@media (max-width: 768px) {
+  .hl-footer {
+    padding: 40px 0;
+    margin-top: 55px;
+
+    .hl-footer-text {
+      font-size: 0.82rem;
+      opacity: 0.75;
+    }
   }
 }

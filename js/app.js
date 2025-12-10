@@ -174,4 +174,22 @@ document.addEventListener("DOMContentLoaded", () => {
       formSection.scrollIntoView({ behavior: "smooth" });
     });
   }
+
+  /* === ANIMACIONES PREMIUM — INTERSECTION OBSERVER === */
+  const animatedElements = document.querySelectorAll(".hl-animate");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("hl-animate-visible");
+        }
+      });
+    },
+    {
+      threshold: 0.25
+    }
+  );
+
+  animatedElements.forEach((el) => observer.observe(el));
 });

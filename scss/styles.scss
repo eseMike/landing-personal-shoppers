@@ -3,21 +3,41 @@
 @import 'components';
 @import 'landing';
 @import 'modal';
+@import 'animations';
 
-/* === Estilos mejorados para botones "Ver más" === */
+/* === Botón "Ver más" — Estilo Premium Editorial (Desktop + Mobile) === */
 .hl-shoppers button {
   background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.35);
   padding: 10px 22px;
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.25s ease;
+  letter-spacing: 0.2px;
+  transition: all 0.28s ease;
+  backdrop-filter: blur(2px); /* toque editorial suave */
 }
 
+/* Hover elegante premium */
 .hl-shoppers button:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.6);
-  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.75);
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* glow elegante */
+}
+
+/* === Responsive — botones más grandes y legibles en móvil === */
+@media (max-width: 768px) {
+  .hl-shoppers button {
+    padding: 12px 26px;
+    font-size: 15px;
+    border-width: 1.2px;
+  }
+
+  .hl-shoppers button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
 }
