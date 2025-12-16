@@ -1,38 +1,170 @@
 .hl-hero {
-  background: #0d0d0d;
-  padding: 125px 0 90px;
-  text-align: center;
-  padding-bottom: 70px;
+  background: #ffffff;
+  padding: 90px 0 80px; /* reduce altura general */
 }
 
-.hl-title {
-  font-size: 3rem;
-  font-weight: 250;
-  letter-spacing: 1.8px;
-  margin-bottom: 16px;
-  color: #ffffff;
+@media (min-width: 900px) {
+  .hl-hero {
+    padding: 90px 0 100px;
+  }
+
+  .hl-hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* texto + formulario */
+    gap: 80px;
+    max-width: 1100px;
+    align-items: center;
+    text-align: left;
+  }
 }
 
-.hl-subtitle {
-  font-size: 1.15rem;
-  font-weight: 200;
-  opacity: 0.9;
-  letter-spacing: 0.55px;
-  margin-bottom: 26px;
-  color: #ffffff;
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
+.hl-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
 }
 
 /* ============================
-   HERO Inner — Centrado y Layout Premium
+   HERO — COMPACTACIÓN DE TEXTOS
 ============================= */
 
-.hl-hero-inner {
-  max-width: 760px;
+.hl-hero .hl-title {
+  font-size: 2.6rem;
+  line-height: 1.18;
+  margin-bottom: 14px;
+  letter-spacing: 1.6px;
+  color: #000000;
+}
+
+.hl-hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  opacity: 0.82;
+  letter-spacing: 0.4px;
+  color: #000000;
+  opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+  .hl-hero .hl-title {
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+  }
+
+  .hl-hero-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+  }
+}
+
+/* ============================
+   HERO — HIGHLIGHTS (FEATURES)
+============================= */
+
+.hl-hero-features {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+  max-width: 420px;
+}
+
+@media (min-width: 900px) {
+  .hl-hero-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 520px;
+  }
+}
+
+.hl-hero-feature {
+  background: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 16px 14px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hl-hero-feature-title {
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.6px;
+  opacity: 0.9;
+  color: #000000;
+}
+
+
+@media (min-width: 900px) {
+  .hl-hero-feature:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* HERO — ajustes finos highlights (mobile) */
+@media (max-width: 600px) {
+  .hl-hero-features {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .hl-hero-feature {
+    padding: 14px 12px;
+  }
+
+  .hl-hero-feature-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* ============================
+   HERO — CAJAS (LAYOUT REFERENCIA)
+============================= */
+
+.hl-hero-box {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 36px 34px;
+}
+
+.hl-hero-box--content {
+  max-width: 520px;
   margin: 0 auto;
-  padding-top: 26px;
+}
+
+.hl-hero-box--form {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* Afinar spacing interno */
+.hl-hero-box .hl-title {
+  margin-top: 0;
+}
+
+.hl-hero-box .hl-hero-features {
+  margin-top: 24px;
+}
+
+/* Responsive: cajas a ancho completo */
+@media (max-width: 900px) {
+  .hl-hero-box {
+    padding: 30px 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hl-hero-box--content,
+  .hl-hero-box--form {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ============================
@@ -178,9 +310,9 @@
 ============================= */
 
 .hl-benefits {
-  background: #0d0d0d;
+  background: #ffffff;
   padding: 95px 0 70px;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
@@ -200,7 +332,7 @@
 .hl-benefits-text {
   font-size: 1.15rem; /* Más presencia */
   font-weight: 200;
-  opacity: 0.78; /* Más visible pero elegante */
+  opacity: 0.75;
   max-width: 680px; /* Más ancho editorial */
   margin: 0 auto 40px auto;
   line-height: 1.75; /* Más suave */
@@ -226,6 +358,7 @@
   font-weight: 200;
   opacity: 0.72;
   line-height: 1.72;
+  color: #000000;
 }
 
 /* ============================
@@ -270,6 +403,7 @@
   letter-spacing: 0.2px;
   text-align: center;
   max-width: 260px;
+  color: #000000;
 }
 
 /* ============================
@@ -553,7 +687,7 @@
   line-height: 1;
   margin-bottom: -18px;
   font-size: 6.6rem;
-  opacity: 0.07;
+  opacity: 0.14; /* más visible pero sigue siendo fondo */
 }
 
 .hl-howto-step-title {
@@ -587,8 +721,8 @@
 ============================= */
 
 .hl-testimonials {
-  background: #000000;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
   padding: 95px 0 125px;
 }
 
@@ -605,7 +739,8 @@
   margin: 0 auto 32px auto;
   letter-spacing: 0.35px;
   font-size: 1rem;
-  opacity: 0.8;
+  opacity: 0.75;
+  color: #000000;
 } 
 
 /* rayita larga antes del nombre del cliente */
@@ -618,9 +753,10 @@
 .hl-testimonial-author {
   font-size: 0.95rem;
   font-weight: 300;
-  margin-top: 4px;
-  opacity: 0.85;
+  margin-top: 6px;
+  opacity: 0.65;
   letter-spacing: 0.45px;
+  color: #000000;
 }
 
 /* Responsive fino para mobile */
@@ -642,13 +778,13 @@
 }
 
 /* ============================
-   CIERRE PREMIUM BLACK — FINAL CTA
+   CIERRE FINAL — CTA EN BLANCO
 ============================= */
 
 .hl-closure {
-  background: #000000;
+  background: #ffffff;
   padding: 110px 0 130px;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
@@ -658,6 +794,7 @@
   line-height: 1.28;
   font-size: 2.7rem;
   letter-spacing: 1.75px;
+  color: #000000;
 }
 
 .hl-closure-text {
@@ -667,13 +804,21 @@
   margin: 0 auto 40px auto;
   line-height: 1.75;
   letter-spacing: 0.3px;
-  opacity: 0.82;
+  opacity: 0.8;
+  color: #000000;
 }
 
+/* Botón mantiene estilo High Life pero en blanco */
 .hl-closure .hl-btn-primary {
+  background: #000000;
+  color: #ffffff;
   padding: 14px 48px;
   font-size: 1.05rem;
   letter-spacing: 1px;
+}
+
+.hl-closure .hl-btn-primary:hover {
+  background: #222222;
 }
 
 /* Animación suave */
@@ -712,5 +857,714 @@
       font-size: 0.82rem;
       opacity: 0.75;
     }
+  }
+}
+/* ============================
+   HERO — AJUSTE FONDO TIPOGRÁFICO
+   (solo mejora visual, no layout)
+============================= */
+
+.hl-hero .hl-title,
+.hl-hero-subtitle {
+}
+
+@media (max-width: 768px) {
+  .hl-hero .hl-title,
+  .hl-hero-subtitle {
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ============================
+   BENEFICIOS — AJUSTE EDITORIAL DE TÍTULOS Y TEXTO
+   (solo tipografía y lectura)
+============================= */
+
+.hl-benefits-title {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hl-benefits-text {
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+/* Afinar títulos de cada beneficio */
+.hl-benefit-item h3 {
+  font-size: 1.22rem;
+  letter-spacing: 1.1px;
+}
+
+/* Afinar lectura de párrafos */
+.hl-benefit-item p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+/* Mobile: mantener legibilidad sin agrandar */
+@media (max-width: 480px) {
+  .hl-benefit-item h3 {
+    font-size: 1.15rem;
+  }
+
+  .hl-benefit-item p {
+    font-size: 0.93rem;
+  }
+}
+/* ============================
+   HERO — FEATURES WRAPPER
+   (contenedor visual de highlights)
+============================= */
+
+.hl-hero-features-wrapper {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* desktop: un poco más de aire */
+@media (min-width: 900px) {
+  .hl-hero-features-wrapper {
+    margin-top: 34px;
+    padding-top: 26px;
+  }
+}
+
+/* mobile: compactar sin perder separación */
+@media (max-width: 600px) {
+  .hl-hero-features-wrapper {
+    margin-top: 20px;
+    padding-top: 18px;
+  }
+}
+/* ============================
+   GLOBAL — SPACING ENTRE SECCIONES
+   (consistencia visual vertical)
+============================= */
+
+/* separación estándar entre secciones */
+.hl-hero + section,
+.hl-form + section,
+.hl-benefits + section,
+.hl-shoppers + section,
+.hl-howto + section,
+.hl-testimonials + section,
+.hl-closure + section {
+  margin-top: 0;
+}
+
+/* ajustar padding superior e inferior de secciones */
+.hl-form,
+.hl-benefits,
+.hl-shoppers,
+.hl-howto,
+.hl-testimonials,
+.hl-closure {
+  scroll-margin-top: 90px;
+}
+
+/* mobile: reducir un poco el aire vertical */
+@media (max-width: 768px) {
+  .hl-form,
+  .hl-benefits,
+  .hl-shoppers,
+  .hl-howto,
+  .hl-testimonials,
+  .hl-closure {
+    scroll-margin-top: 70px;
+  }
+}
+/* ============================
+   HEADER — COMPACTACIÓN FINAL
+============================= */
+
+.hl-header {
+  padding: 8px 0;
+  min-height: 0;
+}
+
+.hl-header-inner {
+  min-height: 0;
+}
+
+@media (max-width: 768px) {
+  .hl-header {
+    padding: 6px 0;
+  }
+}
+/* ============================
+   CÓMO FUNCIONA — POLISH VISUAL
+============================= */
+
+.hl-howto {
+  position: relative;
+}
+
+.hl-howto-title {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Separación más editorial entre pasos */
+.hl-howto-steps {
+  gap: 90px;
+}
+
+/* Ajuste fino de cada paso */
+.hl-howto-step {
+  padding-top: 20px;
+}
+
+/* Número más elegante y menos invasivo */
+.hl-howto-number {
+  opacity: 0.06;
+  letter-spacing: -2px;
+}
+
+/* Desktop: balance visual */
+@media (min-width: 900px) {
+  .hl-howto-steps {
+    gap: 100px;
+  }
+}
+
+/* Mobile: compactar sin perder jerarquía */
+@media (max-width: 600px) {
+  .hl-howto {
+    padding: 70px 0 70px;
+  }
+
+  .hl-howto-title {
+    font-size: 2.1rem;
+    margin-bottom: 45px;
+  }
+
+  .hl-howto-steps {
+    gap: 60px;
+  }
+}
+/* ============================
+   TESTIMONIOS — AJUSTE EDITORIAL FINO
+   (lectura, jerarquía y aire)
+============================= */
+
+.hl-testimonials-title {
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* bloque del testimonio más respirado */
+.hl-testimonial-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* texto ligeramente más elegante */
+.hl-testimonial-item p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* autor más claro */
+.hl-testimonial-author {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* desktop: aire premium */
+@media (min-width: 900px) {
+  .hl-testimonial-item {
+    margin-bottom: 40px;
+  }
+}
+
+/* mobile: compactar */
+@media (max-width: 600px) {
+  .hl-testimonials {
+    padding: 70px 0 80px;
+  }
+
+  .hl-testimonial-item p {
+    font-size: 1rem;
+  }
+}
+/* ============================
+   PERSONAL SHOPPERS — POLISH FINAL
+   (jerarquía, foco humano, CTA)
+============================= */
+
+/* Título con más presencia editorial */
+.hl-shoppers-title {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mejor balance de texto dentro de la tarjeta */
+.hl-shopper-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* CTA más visible sin ser agresivo */
+.hl-shopper-card button {
+  border: 1px solid rgba(0,0,0,0.7);
+  background: transparent;
+  color: #000;
+  transition: all 0.25s ease;
+}
+
+.hl-shopper-card button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Mobile: tarjetas un poco más compactas */
+@media (max-width: 600px) {
+  .hl-shopper-card {
+    padding-bottom: 22px;
+  }
+
+  .hl-shopper-card img {
+    height: 300px;
+  }
+}
+
+/* ============================
+   CIERRE FINAL — AJUSTE EDITORIAL
+   (impacto + claridad)
+============================= */
+
+.hl-closure-title {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.hl-closure-text {
+  max-width: 680px;
+}
+
+/* CTA final más protagonista */
+.hl-closure .hl-btn-primary {
+  margin-top: 18px;
+}
+
+/* Mobile: compactar sin perder fuerza */
+@media (max-width: 600px) {
+  .hl-closure {
+    padding: 90px 0 100px;
+  }
+
+  .hl-closure-title {
+    font-size: 2.2rem;
+  }
+
+  .hl-closure-text {
+    font-size: 1.05rem;
+  }
+}
+
+/* ============================
+   HERO — LOGO TIPOGRÁFICO
+   (tamaño + presencia elegante)
+============================= */
+
+.hl-hero-logo {
+  font-size: clamp(4rem, 12vw, 10rem);
+  opacity: 0.55;
+  letter-spacing: 0.2em;
+}
+
+/* Desktop grande: evitar que domine */
+@media (min-width: 1200px) {
+  .hl-hero-logo {
+    font-size: 9rem;
+    opacity: 0.5;
+  }
+}
+
+/* Mobile: más contenido, menos impacto */
+@media (max-width: 600px) {
+  .hl-hero-logo {
+    font-size: 5rem;
+    opacity: 0.45;
+  }
+}
+/* ============================
+   HERO — LOGO WRAPPER CONTROL
+   (posición y jerarquía)
+============================= */
+
+.hl-hero-logo-wrapper {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 900px) {
+  .hl-hero-logo-wrapper {
+    text-align: left;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hl-hero-logo-wrapper {
+    margin-bottom: 16px;
+  }
+}
+/* ============================
+   HERO — LOGO TIPOGRÁFICO (CORRECCIÓN FINAL)
+   (menos dominante, más fondo)
+============================= */
+
+.hl-hero-logo {
+  opacity: 0.35;
+  transform: translateY(8px);
+}
+
+/* Desktop: aún más sutil */
+@media (min-width: 900px) {
+  .hl-hero-logo {
+    opacity: 0.3;
+    transform: translateY(12px);
+  }
+}
+
+/* Mobile: que no robe foco */
+@media (max-width: 600px) {
+  .hl-hero-logo {
+    opacity: 0.28;
+    transform: translateY(6px);
+  }
+}
+/* ============================
+   HERO — AJUSTE FINAL DE BALANCE (REINTENTO)
+   (no rompe nada existente)
+============================= */
+
+.hl-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* el logo queda completamente de fondo */
+.hl-hero-logo-wrapper {
+  pointer-events: none;
+}
+
+/* respiración final del texto */
+.hl-hero-subtitle {
+  margin-bottom: 22px;
+}
+
+/* desktop: hero más editorial */
+@media (min-width: 900px) {
+  .hl-hero-box--content {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+
+/* mobile: compactar sin perder presencia */
+@media (max-width: 600px) {
+  .hl-hero-box--content {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .hl-hero-subtitle {
+    margin-bottom: 18px;
+  }
+}
+.hl-hero-logo {
+  font-size: clamp(3.2rem, 9vw, 7.5rem);
+  opacity: 0.28;
+}
+
+@media (max-width: 600px) {
+  .hl-hero-logo {
+    font-size: 4.2rem;
+    opacity: 0.24;
+  }
+}
+.hl-hero-logo,
+.hl-hero-logo-text {
+  font-size: clamp(2.8rem, 7vw, 6.2rem);
+  letter-spacing: 0.28em;
+  opacity: 0.18;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* desktop grande: aún más sutil */
+@media (min-width: 1200px) {
+  .hl-hero-logo,
+  .hl-hero-logo-text {
+    font-size: 5.6rem;
+    opacity: 0.16;
+  }
+}
+
+/* mobile: que no robe foco */
+@media (max-width: 600px) {
+  .hl-hero-logo,
+  .hl-hero-logo-text {
+    font-size: 3.6rem;
+    opacity: 0.14;
+    letter-spacing: 0.22em;
+  }
+}
+/* ============================
+   HERO — LOGO FINAL OVERRIDE (ABSOLUTO)
+   objetivo: que el logo sea SOLO fondo,
+   nunca protagonista, nunca dominante
+============================= */
+
+.hl-hero-logo,
+.hl-hero-logo-text {
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  opacity: 0.12;
+  letter-spacing: 0.35em;
+  line-height: 1;
+  white-space: nowrap;
+  filter: blur(0.2px);
+}
+
+/* desktop grande: aún más sutil */
+@media (min-width: 1200px) {
+  .hl-hero-logo,
+  .hl-hero-logo-text {
+    font-size: 5rem;
+    opacity: 0.1;
+  }
+}
+
+/* mobile: prioridad total al contenido */
+@media (max-width: 600px) {
+  .hl-hero-logo,
+  .hl-hero-logo-text {
+    font-size: 3.2rem;
+    opacity: 0.08;
+    letter-spacing: 0.28em;
+  }
+}
+/* ============================
+   HERO — LOGO CONTROL DEFINITIVO
+   (bloque único de control visual)
+============================= */
+
+.hl-hero-logo,
+.hl-hero-logo-text {
+  font-size: clamp(2.2rem, 5vw, 4.8rem) !important;
+  opacity: 0.08 !important;
+  letter-spacing: 0.4em !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+/* mobile: aún más discreto */
+@media (max-width: 600px) {
+  .hl-hero-logo,
+  .hl-hero-logo-text {
+    font-size: 2.6rem !important;
+    opacity: 0.06 !important;
+  }
+}
+/* ============================
+   HERO — FEATURES (POLISH FINAL)
+   solo refuerzo visual y jerarquía
+============================= */
+
+.hl-hero-features {
+  position: relative;
+}
+
+/* tarjetas un poco más elegantes */
+.hl-hero-feature {
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+}
+
+/* título con más presencia */
+.hl-hero-feature-title {
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 1.2px;
+}
+
+/* desktop: micro-elevación */
+@media (min-width: 900px) {
+  .hl-hero-feature:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* mobile: compactar sin perder claridad */
+@media (max-width: 600px) {
+  .hl-hero-feature {
+    padding: 13px 10px;
+  }
+
+  .hl-hero-feature-title {
+    font-size: 0.75rem;
+  }
+}
+/* ============================
+   HERO — LOGO APAGADO DEFINITIVO
+   (solo fondo, cero protagonismo)
+============================= */
+
+.hl-hero-logo,
+.hl-hero-logo-text {
+  font-size: clamp(1.6rem, 4vw, 3.2rem) !important;
+  opacity: 0.04 !important;
+  letter-spacing: 0.45em !important;
+  filter: none !important;
+  transform: none !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+/* mobile: prácticamente invisible */
+@media (max-width: 600px) {
+  .hl-hero-logo,
+  .hl-hero-logo-text {
+    font-size: 1.9rem !important;
+    opacity: 0.03 !important;
+  }
+}
+/* ============================
+   HERO — LOGO ESTABILIZACIÓN FINAL
+   (bloque candado, ya no se toca)
+============================= */
+
+.hl-hero-logo,
+.hl-hero-logo-text {
+  font-size: 2.4rem !important;
+  opacity: 0.05 !important;
+  letter-spacing: 0.38em !important;
+  filter: none !important;
+  transform: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .hl-hero-logo,
+  .hl-hero-logo-text {
+    font-size: 2rem !important;
+    opacity: 0.04 !important;
+  }
+}
+.hl-hero-logo,
+.hl-hero-logo-text {
+  font-size: 1.8rem !important;
+  opacity: 0.03 !important;
+  letter-spacing: 0.5em !important;
+  filter: none !important;
+  transform: none !important;
+  mix-blend-mode: normal !important;
+  pointer-events: none !important;
+}
+
+/* mobile: aún más discreto */
+@media (max-width: 600px) {
+  .hl-hero-logo,
+  .hl-hero-logo-text {
+    font-size: 1.6rem !important;
+    opacity: 0.02 !important;
+  }
+}
+
+/* ============================
+   INTRO EDITORIAL — PERSONAL SHOPPER
+============================= */
+
+.hl-intro-editorial {
+  background: #ffffff;
+  padding: 120px 0 90px;
+  text-align: center;
+  color: #000000;
+}
+
+.hl-intro-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hl-intro-title {
+  font-family: serif;
+  font-size: clamp(3.4rem, 8vw, 5.6rem);
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin-bottom: 22px;
+  line-height: 1.1;
+}
+
+.hl-intro-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.hl-intro-btn {
+  background: #000000;
+  color: #ffffff;
+  padding: 8px 22px;
+  font-size: 0.9rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.hl-intro-btn:hover {
+  background: #222222;
+  transform: translateY(-2px);
+}
+
+.hl-intro-by {
+  font-size: 0.95rem;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.hl-intro-text {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  max-width: 760px;
+  margin: 0 auto;
+  opacity: 0.78;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hl-intro-editorial {
+    padding: 90px 0 70px;
+  }
+
+  .hl-intro-title {
+    font-size: 3rem;
+  }
+
+  .hl-intro-cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hl-intro-text {
+    font-size: 1.05rem;
   }
 }
