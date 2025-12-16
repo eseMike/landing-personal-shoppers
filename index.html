@@ -10,10 +10,13 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER / LOGO TOOLBAR -->
     <header class="hl-header">
-        <div class="hl-container">
+      <div class="hl-topbar">
+        <div class="hl-topbar-logo">
+          <img src="assets/highLifeLogo.png" alt="High Life">
         </div>
+      </div>
     </header>
 
     <!-- INTRO EDITORIAL -->
@@ -32,6 +35,91 @@
           Nuestros expertos en imagen masculina te guiarán hacia un nuevo estilo en tendencia.
         </p>
 
+      </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="hl-hero">
+      <div class="hl-container">
+        <div class="hl-hero-grid">
+
+          <div class="hl-hero-column hl-hero-column--content">
+            <div class="hl-hero-box hl-hero-box--content">
+              <div class="hl-hero-content">
+                <div class="hl-hero-top">
+                  <div class="hl-hero-logo-wrapper">
+                    <span class="hl-hero-logo-text">
+                      <span class="hl-hero-logo-word">high</span>
+                      <span class="hl-hero-logo-word">life</span>
+                    </span>
+                  </div>
+
+                  <h1 class="hl-title">
+                    Agenda tu consultoría de imagen gratuita
+                  </h1>
+
+                  <h3 class="hl-hero-subtitle">
+                    Personal Shoppers a tu medida: en tienda, a domicilio o en línea.
+                  </h3>
+                </div>
+
+                <div class="hl-hero-highlights">
+                  <div class="hl-hero-feature">
+                    <span class="hl-hero-feature-title">asesoría personalizada</span>
+                  </div>
+
+                  <div class="hl-hero-feature">
+                    <span class="hl-hero-feature-title">experiencia premium</span>
+                  </div>
+
+                  <div class="hl-hero-feature">
+                    <span class="hl-hero-feature-title">personal shoppers certificados</span>
+                  </div>
+                </div>
+              </div> <!-- .hl-hero-content -->
+            </div> <!-- .hl-hero-box -->
+          </div> <!-- .hl-hero-column--content -->
+
+          <div class="hl-hero-column hl-hero-column--form">
+            <div class="hl-hero-box hl-hero-box--form">
+              <div class="hl-hero-form">
+                <h2 class="hl-form-title">agenda tu cita</h2>
+
+                <form id="booking-form" class="hl-form-grid">
+                  <div class="hl-input-group">
+                    <label>nombre completo</label>
+                    <input type="text" placeholder="escribe tu nombre" required />
+                  </div>
+
+                  <div class="hl-input-group">
+                    <label>correo electrónico</label>
+                    <input type="email" placeholder="nombre@correo.com" required />
+                  </div>
+
+                  <div class="hl-input-group">
+                    <label>teléfono</label>
+                    <input type="tel" placeholder="55 0000 0000" required />
+                  </div>
+
+                  <div class="hl-input-group">
+                    <label>modalidad</label>
+                    <select required>
+                      <option value="">selecciona una opción</option>
+                      <option value="tienda">en tienda</option>
+                      <option value="domicilio">a domicilio</option>
+                      <option value="online">en línea</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="hl-btn-primary hl-btn-large">
+                    confirmar cita
+                  </button>
+                </form>
+              </div> <!-- .hl-hero-form -->
+            </div> <!-- .hl-hero-box -->
+          </div> <!-- .hl-hero-column--form -->
+
+        </div>
       </div>
     </section>
 
@@ -153,90 +241,6 @@
       </div>
     </section>
 
-    <!-- HERO -->
-    <section class="hl-hero">
-      <div class="hl-container">
-        <div class="hl-hero-grid">
-
-          <div class="hl-hero-column hl-hero-column--content">
-            <div class="hl-hero-box hl-hero-box--content">
-              <div class="hl-hero-content">
-                <div class="hl-hero-top">
-                  <div class="hl-hero-logo-wrapper">
-                    <span class="hl-hero-logo-text">
-                      <span class="hl-hero-logo-word">high</span>
-                      <span class="hl-hero-logo-word">life</span>
-                    </span>
-                  </div>
-
-                  <h1 class="hl-title">
-                    Agenda tu consultoría de imagen gratuita
-                  </h1>
-
-                  <h3 class="hl-hero-subtitle">
-                    Personal Shoppers a tu medida: en tienda, a domicilio o en línea.
-                  </h3>
-                </div>
-
-                <div class="hl-hero-highlights">
-                  <div class="hl-hero-feature">
-                    <span class="hl-hero-feature-title">asesoría personalizada</span>
-                  </div>
-
-                  <div class="hl-hero-feature">
-                    <span class="hl-hero-feature-title">experiencia premium</span>
-                  </div>
-
-                  <div class="hl-hero-feature">
-                    <span class="hl-hero-feature-title">personal shoppers certificados</span>
-                  </div>
-                </div>
-              </div> <!-- .hl-hero-content -->
-            </div> <!-- .hl-hero-box -->
-          </div> <!-- .hl-hero-column--content -->
-
-          <div class="hl-hero-column hl-hero-column--form">
-            <div class="hl-hero-box hl-hero-box--form">
-              <div class="hl-hero-form">
-                <h2 class="hl-form-title">agenda tu cita</h2>
-
-                <form id="booking-form" class="hl-form-grid">
-                  <div class="hl-input-group">
-                    <label>nombre completo</label>
-                    <input type="text" placeholder="escribe tu nombre" required />
-                  </div>
-
-                  <div class="hl-input-group">
-                    <label>correo electrónico</label>
-                    <input type="email" placeholder="nombre@correo.com" required />
-                  </div>
-
-                  <div class="hl-input-group">
-                    <label>teléfono</label>
-                    <input type="tel" placeholder="55 0000 0000" required />
-                  </div>
-
-                  <div class="hl-input-group">
-                    <label>modalidad</label>
-                    <select required>
-                      <option value="">selecciona una opción</option>
-                      <option value="tienda">en tienda</option>
-                      <option value="domicilio">a domicilio</option>
-                      <option value="online">en línea</option>
-                    </select>
-                  </div>
-
-                  <button type="submit" class="hl-btn-primary hl-btn-large">
-                    confirmar cita
-                  </button>
-                </form>
-              </div> <!-- .hl-hero-form -->
-            </div> <!-- .hl-hero-box -->
-          </div> <!-- .hl-hero-column--form -->
-
-        </div>
-      </div>
-    </section>
 
     <!-- SECCIÓN SIGUIENTE — BENEFICIOS HIGH LIFE -->
     <section class="hl-benefits">

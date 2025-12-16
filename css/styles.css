@@ -84,9 +84,43 @@ body {
   padding: 120px 0; /* para hero o bloques premium */
 }
 
+/* ============================
+   TOP BAR — LOGO HIGH LIFE
+============================= */
+.hl-topbar {
+  background: #000000;
+  width: 100%;
+  padding: 2px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.hl-topbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hl-topbar-logo img {
+  height: 150px;
+  width: auto;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hl-topbar {
+    padding: 1px 0;
+    margin-bottom: 12px;
+  }
+  .hl-topbar-logo img {
+    height: 96px;
+  }
+}
 .hl-hero {
   background: #ffffff;
-  padding: 90px 0 80px; /* reduce altura general */
+  padding: 60px 0 80px; /* reduce espacio arriba */
 }
 
 @media (min-width: 900px) {
@@ -1492,7 +1526,7 @@ body {
 ============================= */
 .hl-intro-editorial {
   background: #ffffff;
-  padding: 120px 0 90px;
+  padding: 90px 0 40px; /* menos espacio abajo para pegar con hero */
   text-align: center;
   color: #000000;
 }
@@ -1553,7 +1587,7 @@ body {
 /* Mobile */
 @media (max-width: 600px) {
   .hl-intro-editorial {
-    padding: 90px 0 70px;
+    padding: 60px 0 40px;
   }
   .hl-intro-title {
     font-size: 3rem;
